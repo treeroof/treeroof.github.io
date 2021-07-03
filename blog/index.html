@@ -6,7 +6,12 @@ title: Treeroof's Blog Mk. III
 	<ul class="posts">
 		<li>test item</li>
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date }}</span> » <p title="{{ post.title }}">{{ post.title }}</p></li>
-	  {% endfor %}
+		{% for post in site.posts %}
+	   	 <li><span>{{ post.date }}</span> » <p title="{{ post.title }}">{{ post.title }}</p></li>
+	  	{% endfor %}
+		 The following people are members of our research team:
+ 		{% for post in site.posts %}
+		 - {{ post.title }}
+ 		{% endfor %}
+		
 	</ul>
