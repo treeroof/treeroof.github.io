@@ -7,6 +7,6 @@ title: Treeroof's Blog Mk. III
 		<li>test list item!!</li>
 
 	  {% for post in site.posts %}
-	    <li><span>{{ post.date }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	    <li><span>{{ post.date }}</span> » <p title="{{ post.title }}">{{ post.title }}</p></li>
 	  {% endfor %}
 	</ul>
