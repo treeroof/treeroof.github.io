@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>{{ page.title }}</title>
+			<title >{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
 			<nav>
 	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
+	        		{% for item in site.data.navigation %}
+						<a href="{{ item.link }}" {% if page.url == item.link %} current-page {% endif %}> {{item.name}} </a>
+					{% endfor %}
 	    		</ul>
 			</nav>
-			<div class="container">
+			<div class="container" text-accent>
 			
 			{{ content }}
 			

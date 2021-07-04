@@ -1,43 +1,105 @@
-body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+/* https://mycolor.space/?hex=%23102F51&sub=1 */
+
+:root {
+    --primary-100: hsl(211, 67%, 30%);
+    --primary-500: hsl(211, 67%, 19%);
+    --primary-900: hsl(211, 67%, 11%);
+    --secondary-100: hsl(220, 72%, 90%);
+    --secondary-500: hsl(220, 72%, 82%);
+    --secondary-900: hsl(220, 72%, 50%);
+    --highlight-100: hsl(42, 77%, 56%);
+    --highlight-500: hsl(42, 77%, 48%);
+    --highlight-900: hsl(42, 77%, 42%);
+    --background-100: hsl(60, 28%, 98%);
+    --background-500: hsl(60, 28%, 92%);
+    --background-900: hsl(60, 28%, 86%);
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+[current-page] {
+    color: var(--secondary-900);
+    padding: 0.5em;
+  }
+
+  [text-accent] {
+    color: var(--primary-100);
+  }
+  
+
+body {
+  margin: 2em auto;
+  width: 800px;
+  max-width: 80%;
+  background-color: var(--background-100);
+}
+
+nav {
+    background: linear-gradient(
+      to right,
+      var(--background-100),
+      var(--secondary-500),
+      var(--background-100)
+    );
+    padding: 1px;
+  }
+
+nav ul,
+footer ul {
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+  flex: 1 0;
+  list-style: none;
+  font-weight: bold;
+  background: var(--background-100);
+  margin: 0.5em;
+}
+
+nav ul a,
+footer ul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  text-decoration: none;
+  color: var(--primary-100);
+  outline: aqua;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-900);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: "Helvetica", "Arial", "Sans-Serif";
+}
+p {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: var(--primary-500);
+}
+footer {
+  border-top: 2px solid var(--secondary-500);
+  font-size: 0.8em;
+}
+
+ul.posts {
+  margin: 2em auto 4em;
+  font-size: 1.5em;
 }
 
 ul.posts li {
-    list-style: none;
+  list-style: none;
 }

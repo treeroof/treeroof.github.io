@@ -1,7 +1,4 @@
-name: Tree, blog
+name: Treeblog
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-collections: 
-posts:
-  output: true
   
