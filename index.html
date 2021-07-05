@@ -9,7 +9,8 @@ title: Tree's Blog
   <h1>Tutorials</h1>
   <p>{{ site.tutorial }}</p>
   <ul class="tutorials">
-    {% for tutorial in site.tutorials %}
+    {% assign sorted = site.tutorials | sort-by: 'step' %}
+    {% for tutorial in sorted %}
     <li>
       <a class="post-link" href="{{ tutorial.url | prepend: site.baseurl }}"
         >{{ tutorial.tutorial }}</a
