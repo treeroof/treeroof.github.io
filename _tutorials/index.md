@@ -1,21 +1,15 @@
 ---
 layout: default
-title: Tree's Blog
 ---
 
-<div class="blurb">
-  <h1>Hi there, I'm treeroof!</h1>
-  <p>Welcome!<a href="/about">Read more about my life...</a></p>
   <h1>Tutorials</h1>
   <p>{{ site.tutorial }}</p>
   <ul class="tutorials">
     {% for tutorial in site.tutorials %}
     <li>
       <a class="post-link" href="{{ tutorial.url | prepend: site.baseurl }}"
-        >{{ tutorial.tutorial }}</a
+        >{{ tutorial.tutorial | capitalize }}</a
       >
     </li>
     {% endfor %}
   </ul>
-</div>
-<!-- /.blurb -->

@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+
+{% assign myparent = 'tutorials/' | append: page.tutorial %}
+
+{% if page.next.title != 'Index' %}
+  <h3>Tutorial: <a href="{{ myparent | relative_url }}">{{ page.tutorial }}</a></h3>
+  {% else %}
+  <h3><a href="{{ 'tutorials/' | relative_url }}">Back to Tutorials</a></h3>
+{% endif %}
+
+<div class="post">
+  {{ content }}
+</div>
+
+
+<div class="post-nav">
+  <div>
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}">⇠ {{page.previous.title | capitalize }}</a>
+    {% endif %}
+  </div>
+  <div class="post-nav-next">
+    {% if page.next.url and page.next.title != 'Index' %}
+    <a href="{{page.next.url}}">{{page.next.title | capitalize }} ⇢</a>
+    {% endif %}
+  </div>
+</div>

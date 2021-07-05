@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<h1>{{ page.tutorial | capitalize }} Tutorial</h1>
+
+<ol class="steps">
+  {% assign items = site.steps | sort: 'step' %}
+    {% for step in items %}
+      {% if step.tutorial == page.tutorial %}
+ 
+    <li>
+      <a class="post-link" href="{{ step.url | prepend: site.baseurl }}"
+        >{{ step.title | capitalize }}</a
+      >
+    </li>
+      {% endif %}
+    {% endfor %}
+  </ol>

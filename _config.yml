@@ -1,4 +1,11 @@
 name: Treeblog
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
-  
+collections:
+  steps:
+    output: true
+    sort_by: step
+  tutorials:
+    output: true
+defaults:
+
